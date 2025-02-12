@@ -1,0 +1,1 @@
+mkdir ~/.bashrc.d
