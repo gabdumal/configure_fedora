@@ -1,4 +1,8 @@
+mkdir -p ~/.bashrc.d
+mkdir -p ~/.ssh
+mkdir -p ~/dev
+mkdir -p ~/Templates
+
 echo "" > ~/Templates/Blank
 echo "" > ~/Templates/Text.txt
-
-mkdir -p ~/dev
+echo "" > ~/Templates/Markdown.md

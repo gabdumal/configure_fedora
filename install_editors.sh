@@ -4,7 +4,6 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 dnf check-update
 sudo dnf install code -y
 
-## Install Zed
-flatpak install dev.zed.Zed -y
-echo  "alias zed=\"flatpak run dev.zed.Zed\"" >> ~/.bashrc.d/zed.sh
-
+# ## Install Zed
+# flatpak install dev.zed.Zed -y
+# echo  "alias zed=\"flatpak run dev.zed.Zed\"" >> ~/.bashrc.d/zed.sh
