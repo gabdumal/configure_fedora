@@ -70,7 +70,7 @@ Install recommended applications.
 Install VSCode.
 
 ```bash
-./install_editors.sh
+./configure_editors.sh
 ```
 
 ## Configure Git
@@ -125,7 +125,7 @@ Install Fish.
 Execute the following command.
 
 ```bash
-./install_fish.sh
+./configure_fish.sh
 ```
 
 Set Fish as the interactive shell.
@@ -155,7 +155,7 @@ Install Starship.
 Execute the following command in Fish shell, and enter `y` when prompted.
 
 ```fish
-./install_starship.sh
+./configure_starship.sh
 ```
 
 ### Zoxide
@@ -164,5 +164,13 @@ Install Zoxide.
 Execute the following command in Fish shell.
 
 ```fish
-./install_zoxide.sh
+./configure_zoxide.sh
+```
+
+## Python
+
+Install and configure Python.
+
+```fish
+./configure_python.sh
 ```
