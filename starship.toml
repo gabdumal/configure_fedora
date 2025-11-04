@@ -1,0 +1,281 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+command_timeout = 500
+format = """
+(\
+    [](fg:peach)\
+    ($hostname)\
+    ($shell)\
+    ($sudo)\
+    $status\
+)\
+(\
+    [](fg:flamingo inverted)\
+    [ ](bg:flamingo)\
+    $directory\
+    [ ](fg:flamingo)\
+)\
+(\
+    [](fg:lavender)\
+    $git_branch\
+    $git_commit\
+    $git_state\
+    $git_metrics\
+    [](fg:lavender)\
+)\
+(\
+    $fill\
+
+    $nodejs\
+    $deno\
+    $bun\
+    $dart\
+    $c\
+    $cmake\
+    $java\
+    $python\
+    $rust\
+    $typst\
+  
+    $package\
+    $direnv\
+    $cmd_duration\
+)
+$character\
+"""
+palette = "catppuccin_latte"
+scan_timeout = 30
+
+[bun]
+format = "( [](fg:#F9F1E1)[$symbol( $version)]($style)[](fg:#F9F1E1))"
+style = "bold bg:#F9F1E1 fg:#F472B6"
+symbol = ""
+
+[c]
+commands = [
+    [
+        "cc",
+        "--version",
+    ],
+    [
+        "gcc",
+        "--version",
+    ],
+    [
+        "g++",
+        "--version",
+    ],
+    [
+        "clang",
+        "--version",
+    ],
+    [
+        "clang++",
+        "--version",
+    ],
+]
+detect_extensions = [
+    "c",
+    "h",
+    "C",
+    "H",
+    "cpp",
+    "hpp",
+    "c++",
+    "h++",
+    "cc",
+    "hh",
+    "cxx",
+    "hxx",
+    "cppm",
+    "ixx",
+]
+format = "( [](fg:#004482)[$symbol( $version(-$name))]($style)[](fg:#004482))"
+style = "bold bg:#004482 fg:#649AD2"
+symbol = ""
+
+[character]
+disabled = false
+error_symbol = "[✗](bold red)"
+format = "$symbol "
+success_symbol = "[➜](bold green)"
+
+[cmake]
+format = "( [](fg:#014E8D)[[$symbol](bg:#014E8D fg:#DF1F29)( $version)]($style)[](fg:#014E8D))"
+style = "bold bg:#014E8D fg:#21AA4D"
+symbol = ""
+
+[cmd_duration]
+disabled = false
+format = "( [](fg:sky)[ $duration]($style)[](fg:sky))"
+show_milliseconds = false
+show_notifications = false
+style = "bold bg:sky fg:base"
+
+[custom]
+
+[dart]
+format = "( [](fg:#045392)[$symbol( $version)]($style)[](fg:#045392))"
+style = "bold bg:#045392 fg:#2AB1EE"
+symbol = ""
+
+[deno]
+format = "( [](fg:#70FFAF)[$symbol( $version)]($style)[](fg:#70FFAF))"
+style = "bold bg:#70FFAF fg:#0B0D11"
+symbol = ""
+
+[directory]
+disabled = false
+fish_style_pwd_dir_length = 1
+format = "([$read_only]($read_only_style)[ ](bg:flamingo))[$path]($style)"
+home_symbol = ""
+read_only = "󰏯"
+read_only_style = "fg:red bg:crust"
+repo_root_format = "([$read_only]($read_only_style))([$before_root_path]($style))[$repo_root]($repo_root_style)[$path]($style)"
+style = "fg:base bg:flamingo"
+truncate_to_repo = true
+truncation_length = 3
+truncation_symbol = "…/"
+use_logical_path = true
+use_os_path_sep = true
+
+[directory.substitutions]
+Documents = "󰈙"
+Downloads = ""
+Music = ""
+Pictures = ""
+dev = ""
+
+[direnv]
+disabled = false
+format = "( [$symbol( $status)]($style))"
+style = "fg:teal"
+symbol = ""
+
+[fill]
+disabled = false
+style = ""
+symbol = " "
+
+[git_branch]
+disabled = false
+format = "[$symbol $branch(:$remote_branch)]($style)"
+ignore_branches = []
+style = "bg:lavender fg:base"
+symbol = ""
+truncation_symbol = "…"
+
+[git_commit]
+commit_hash_length = 7
+disabled = false
+style = "bold fg:green"
+
+[git_metrics]
+added_style = "bold bg:crust fg:green"
+deleted_style = "bold bg:crust fg:red"
+disabled = false
+format = "([ ](bg:lavender)([ +$added]($added_style))([ -$deleted]($deleted_style))[ ](bg:crust))"
+only_nonzero_diffs = true
+
+[git_state]
+disabled = false
+format = "[ ](bg:lavender)[ $state( $progress_current/$progress_total) ]($style)"
+style = "bold bg:crust fg:yellow"
+
+[hostname]
+disabled = false
+format = "[$ssh_symbol ]($style)"
+ssh_only = true
+ssh_symbol = "󰌘"
+style = "fg:base bg:peach"
+
+[java]
+format = "( [](fg:#5283A3)[$symbol( $version)]($style)[](fg:#5283A3))"
+style = "bold bg:#5283A3 fg:#F89917"
+symbol = ""
+
+[nodejs]
+format = "( [](fg:#417E38)[$symbol( $version)]($style)[](fg:#417E38))"
+style = "bold bg:#417E38 fg:#333333"
+symbol = ""
+
+[package]
+format = "( [](fg:yellow)[$symbol( $version)]($style)[](fg:yellow))"
+style = "bg:yellow fg:base"
+symbol = ""
+
+[palettes.catppuccin_latte]
+base = "#eff1f5"
+blue = "#1e66f5"
+crust = "#dce0e8"
+flamingo = "#dd7878"
+green = "#40a02b"
+lavender = "#7287fd"
+mantle = "#e6e9ef"
+maroon = "#e64553"
+mauve = "#8839ef"
+overlay0 = "#9ca0b0"
+overlay1 = "#8c8fa1"
+overlay2 = "#7c7f93"
+peach = "#fe640b"
+pink = "#ea76cb"
+red = "#d20f39"
+rosewater = "#dc8a78"
+sapphire = "#209fb5"
+sky = "#04a5e5"
+subtext0 = "#6c6f85"
+subtext1 = "#5c5f77"
+surface0 = "#ccd0da"
+surface1 = "#bcc0cc"
+surface2 = "#acb0be"
+teal = "#179299"
+text = "#4c4f69"
+yellow = "#df8e1d"
+
+[python]
+format = "( [](fg:#4380B1)[$symbol( $version)]($style)[](fg:#4380B1))"
+style = "bold bg:#4380B1 fg:#FEDC54"
+symbol = ""
+
+[rust]
+format = "( [](fg:#F46623)[$symbol( $version)]($style)[](fg:#F46623))"
+style = "bold bg:#F46623 fg:#A72145"
+symbol = ""
+
+[shell]
+disabled = false
+fish_indicator = ""
+format = "[$indicator ]($style)"
+powershell_indicator = "_"
+style = "bg:peach fg:base"
+unknown_indicator = "_"
+zsh_indicator = "󰰷"
+
+[status]
+disabled = false
+format = "[$symbol]($style)"
+map_symbol = true
+not_executable_symbol = "[](bg:red fg:peach)[ $status ](bold bg:red fg:base)[](fg:red)"
+not_found_symbol = "[](bg:maroon fg:peach)[ $status ](bold bg:maroon fg:base)[](fg:maroon)"
+pipestatus = false
+pipestatus_format = "[$pipestatus] => [$symbol$common_meaning$signal_name$maybe_int]($style)"
+pipestatus_separator = "|"
+recognize_signal_code = true
+sigint_symbol = "[](bg:maroon fg:peach)[](bold bg:maroon fg:base)[](fg:maroon)"
+signal_symbol = "[](bg:teal fg:peach)[ $status ](bold bg:teal fg:base)[](fg:teal)"
+style = ""
+success_symbol = "[](fg:peach)"
+symbol = "[](bg:rosewater fg:peach)[ $status ](bold bg:rosewater fg:base)[](fg:rosewater)"
+
+[sudo]
+allow_windows = false
+disabled = false
+format = "[ $symbol ]($style)"
+style = "bg:peach fg:base"
+symbol = "󱥠"
+
+[typst]
+format = "( [](fg:#127885)[$symbol( $version)]($style)[](fg:#127885))"
+style = "bold bg:#127885 fg:#79C3D0"
+symbol = ""

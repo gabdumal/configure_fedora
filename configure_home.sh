@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 mkdir -p ~/.bashrc.d
 mkdir -p ~/.ssh
 mkdir -p ~/dev

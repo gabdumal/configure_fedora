@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ## Set default branch name to `main`.
 git config --global init.defaultBranch main
 
