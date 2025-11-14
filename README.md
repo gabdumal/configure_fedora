@@ -174,3 +174,11 @@ Install and configure Python.
 ```fish
 ./configure_python.sh
 ```
+
+## C, C++ and CMake
+
+Install and configure C, C++, and CMake.
+
+```fish
+./configure_c_cpp_cmake.sh
+```
