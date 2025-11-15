@@ -182,3 +182,11 @@ Install and configure C, C++, and CMake.
 ```fish
 ./configure_c_cpp_cmake.sh
 ```
+
+## PNPM and Node
+
+Install and configure PNPM and Node.
+
+```fish
+./configure_pnpm.sh
+```
